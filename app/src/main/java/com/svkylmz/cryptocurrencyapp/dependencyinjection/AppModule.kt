@@ -1,5 +1,6 @@
 package com.svkylmz.cryptocurrencyapp.dependencyinjection
 
+import com.svkylmz.cryptocurrencyapp.repository.CryptoRepository
 import com.svkylmz.cryptocurrencyapp.service.CryptoAPI
 import com.svkylmz.cryptocurrencyapp.util.Constants.BASE_URL
 import dagger.Module
@@ -22,4 +23,8 @@ object AppModule {
             .build()
             .create(CryptoAPI::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun provideCryptoRepository(api: CryptoAPI) = CryptoRepository(api)
 }
