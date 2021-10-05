@@ -9,11 +9,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
+import coil.annotation.ExperimentalCoilApi
 import com.svkylmz.cryptocurrencyapp.ui.theme.CryptoCurrencyAppTheme
 import com.svkylmz.cryptocurrencyapp.view.CryptoDetailScreen
 import com.svkylmz.cryptocurrencyapp.view.CryptoListScreen
 import dagger.hilt.android.AndroidEntryPoint
 
+@ExperimentalCoilApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
